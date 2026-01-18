@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tech Weather Store - Smart shopping based on your local weather">
+    <meta name="keywords" content="weather, tech store, ecommerce, gadgets">
+    <meta name="author" content="Dosmagambetov Rakhat">
+    <title>Tech Weather Store - Smart Shopping</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header-content">
+                <div>
+                    <h1>⚡ Tech Weather Store</h1>
+                    <p>Smart shopping recommendations based on your local weather</p>
+                </div>
+                <button class="cart-button" onclick="toggleCart()" aria-label="Shopping cart">
+                    🛒 Cart
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+            
+            <div class="search-bar">
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    placeholder="Enter city name (e.g., Astana, London, New York)" 
+                    value="Astana"
+                    aria-label="City name"
+                >
+                <button onclick="fetchData()" aria-label="Search weather">
+                    🔍 Search
+                </button>
+            </div>
+        </header>
+
+        <!-- Shopping Cart Modal -->
+        <div id="cartModal" class="cart-modal hidden">
+            <div class="cart-modal-content">
+                <div class="cart-header">
+                    <h2>🛒 Shopping Cart</h2>
+                    <button class="close-button" onclick="toggleCart()">&times;</button>
+                </div>
+                
+                <div id="cartItems" class="cart-items">
+                    <!-- Cart items will be displayed here -->
+                </div>
+                
+                <div class="cart-footer">
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <div>
+                            <div class="total-usd" id="totalUSD">$0.00</div>
+                            <div class="total-local" id="totalLocal">≈ 0 $</div>
+                        </div>
+                    </div>
+                    <div class="cart-actions">
+                        <button class="clear-cart-btn" onclick="clearCart()">
+                            🗑️ Clear Cart
+                        </button>
+                        <button class="checkout-btn" onclick="checkout()">
+                            ✅ Checkout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error" class="error hidden" role="alert"></div>
+
+        <!-- Loading Indicator -->
+        <div id="loading" class="loading hidden" role="status">
+            <div class="spinner"></div>
+            <p>Loading data...</p>
+        </div>
+
+        <!-- Weather Section -->
+        <section id="weatherSection" class="weather-section hidden">
+            <h2>🌤️ Current Weather</h2>
+            <div class="weather-grid" id="weatherGrid">
+                <!-- Weather cards will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="productsSection" class="products-section hidden">
+            <h2 class="section-title">🎯 Recommended Products for You</h2>
+            <div class="products-grid" id="productsGrid">
+                <!-- Product cards will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="newsSection" class="news-section hidden">
+            <h2>📰 Latest Tech News</h2>
+            <div id="newsGrid">
+                <!-- News items will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2025 Tech Weather Store | Powered by OpenWeather, NewsAPI & ExchangeRate-API</p>
+            <p><strong>Assignment 2:</strong> Backend API Integration & Service Development</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>

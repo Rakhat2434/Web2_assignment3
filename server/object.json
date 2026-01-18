@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "MacBook Pro 14\"",
+    "price": 1999,
+    "category": "laptop",
+    "icon": "💻",
+    "weather": "all"
+  },
+  {
+    "id": 2,
+    "name": "iPad Air",
+    "price": 599,
+    "category": "tablet",
+    "icon": "📱",
+    "weather": "all"
+  },
+  {
+    "id": 3,
+    "name": "iPhone 15 Pro",
+    "price": 999,
+    "category": "phone",
+    "icon": "📱",
+    "weather": "all"
+  },
+  {
+    "id": 4,
+    "name": "Portable Fan",
+    "price": 29,
+    "category": "accessory",
+    "icon": "🌀",
+    "weather": "hot"
+  },
+  {
+    "id": 5,
+    "name": "Wireless Headphones",
+    "price": 199,
+    "category": "accessory",
+    "icon": "🎧",
+    "weather": "cold"
+  },
+  {
+    "id": 6,
+    "name": "Waterproof Case",
+    "price": 39,
+    "category": "accessory",
+    "icon": "🛡️",
+    "weather": "rain"
+  },
+  {
+    "id": 7,
+    "name": "Power Bank 20000mAh",
+    "price": 49,
+    "category": "accessory",
+    "icon": "🔋",
+    "weather": "all"
+  },
+  {
+    "id": 8,
+    "name": "Smart Watch",
+    "price": 399,
+    "category": "wearable",
+    "icon": "⌚",
+    "weather": "all"
+  },
+  {
+    "id": 9,
+    "name": "Gaming Laptop",
+    "price": 1499,
+    "category": "laptop",
+    "icon": "🎮",
+    "weather": "all"
+  },
+  {
+    "id": 10,
+    "name": "Wireless Mouse",
+    "price": 49,
+    "category": "accessory",
+    "icon": "🖱️",
+    "weather": "all"
+  },
+  {
+    "id": 11,
+    "name": "Bluetooth Speaker",
+    "price": 99,
+    "category": "accessory",
+    "icon": "🔊",
+    "weather": "all"
+  }
+]
